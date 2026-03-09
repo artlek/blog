@@ -1,0 +1,57 @@
+/* Wymuszenie białego tła dla trybu JASNEGO */
+:not([data-theme="dark"]) body {
+    --theme: #ffffff !important;
+    background-color: var(--theme) !important;
+}
+/* Usuwa tło, obramowanie i cienie z kart wpisów */
+.post-entry {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    border-radius: 0 !important;
+}
+/* element tagu na stronie tagów */
+.terms-tags a {
+    border-radius: 0 !important;
+    background: var(--secondary-hover) !important;
+}
+.terms-tags a:hover {
+    color: var(--secondary) !important;
+}
+/* element tagu na stronie wpisu */
+.post-tags a {
+    border-radius: 0 !important;
+}
+h1 {
+    font-size: 2.0rem !important;
+}
+h2 {
+    font-size: 1.6rem !important;
+}
+.post-content h3 {
+    font-size: 1.4rem !important;
+}
+.post-title {
+    font-size: 2.0rem !important;
+}
+/* Tworzenie okrągłego avatara z inicjałem */
+.logo a:before {
+    content: "L";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary);
+    color: #ffffff !important;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+[data-theme="dark"] .logo a::before {
+    background: var(--secondary-hover) !important;
+    border: 1px solid var(--primary) !important;
+}

@@ -1,0 +1,19 @@
+# Folder z wygenerowaną stroną (najważniejsze!)
+public/
+
+# Zasoby tymczasowe Hugo (cache obrazków, assety)
+resources/
+.hugo_build.cfg
+
+# Folder z dociągniętymi modułami (jeśli ich używasz)
+hugo_stats.json
+
+# Pliki systemowe i edytorów
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logi błędów i pliki tymczasowe
+*.log
+tmp/

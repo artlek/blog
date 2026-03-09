@@ -13,7 +13,7 @@
     style="box-shadow: none; margin: 0; padding: 5px 0; border-bottom: 1px solid var(--border);">
     <div style="display: flex; align-items: baseline; gap: 20px;">
         <time style="color: var(--secondary); font-family: monospace; white-space: nowrap; font-size: 0.9rem;">
-            {{ time.Format "2 January 2006" .Date }}
+            {{ .Date.Format "2 January 2006" }}
         </time>
         <h3 style="margin: 0; font-size: 1.1rem; font-weight: 400;">
             <a href="{{ .Permalink }}">{{ .Title }}</a>

@@ -17,16 +17,21 @@ params:
     - posts
   footer:
     hideCopyright: true
+  label:
+    text: "lekston.net"
+    icon: /avatar3.jpg
+    iconHeight: 35
+
     
 menu:
   main:
-    - name: Posts
+    - name: Wpisy
       url: /
       weight: 1
-    - name: Tags
+    - name: Tagi
       identifier: tags
       url: /tags/
       weight: 2
-    - name: About
+    - name: O projekcie
       url: /about/
       weight: 3

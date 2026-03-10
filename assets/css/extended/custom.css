@@ -35,23 +35,14 @@ h2 {
 .post-title {
     font-size: 2.0rem !important;
 }
-/* Tworzenie okrągłego avatara z inicjałem */
-.logo a:before {
-    content: "L";
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    background-color: var(--primary);
-    color: #ffffff !important;
-    border-radius: 50%;
-    margin-right: 10px;
-    font-size: 18px;
-    font-weight: bold;
+/* logo w nagłówku */
+.logo img {
+    border-radius: 50% !important;
+    margin-right: 15px !important;
     vertical-align: middle;
+    object-fit: cover;
 }
-[data-theme="dark"] .logo a::before {
-    background: var(--secondary-hover) !important;
-    border: 1px solid var(--primary) !important;
+.logo a {
+    display: flex;
+    align-items: center;
 }

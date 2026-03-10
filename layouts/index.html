@@ -1,6 +1,9 @@
 {{ define "main" }}
 <header class="page-header">
-    <h1>{{ .Title | default .Site.Title }}</h1>
+    <!-- <h1>{{ .Title | default .Site.Title }}</h1> -->
+    {{- if .IsHome }}
+        <h1>Wszystkie wpisy</h1>
+    {{- end }}
 </header>
 
 <div class="post-content">

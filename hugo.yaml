@@ -1,5 +1,6 @@
 baseURL: https://lekston.net/
 languageCode: pl-pl
+defaultContentLanguage: pl
 title: My New Hugo Project
 theme: hugo-PaperMod
 enableRobotsTXT: true
@@ -9,9 +10,13 @@ languages:
     languageName: Polski
     contentDir: content
     weight: 1
+    params:
+      label:
+        text: "lekston.net"
 
 params:
   author: "Lekston"
+  avatar: /avatar3.jpg
   description: "Lekston's personal website."
   mainSections: 
     - posts
@@ -21,7 +26,6 @@ params:
     text: "lekston.net"
     icon: /avatar3.jpg
     iconHeight: 35
-
     
 menu:
   main:

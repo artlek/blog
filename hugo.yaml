@@ -16,7 +16,7 @@ languages:
 
 params:
   author: "Lekston"
-  avatar: /avatar3.jpg
+  avatar: /avatar.jpg
   description: "Lekston's personal website."
   mainSections: 
     - posts
@@ -24,7 +24,7 @@ params:
     hideCopyright: true
   label:
     text: "lekston.net"
-    icon: /avatar3.jpg
+    icon: /avatar.jpg
     iconHeight: 35
     
 menu:

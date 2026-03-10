@@ -2,6 +2,7 @@ baseURL: https://lekston.net
 languageCode: pl-pl
 title: My New Hugo Project
 theme: hugo-PaperMod
+enableRobotsTXT: true
 
 languages:
   pl:

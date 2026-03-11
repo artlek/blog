@@ -1,40 +1,27 @@
-{{ define "main" }}
+
+{{- define "main" }}
+
+{{- if .IsHome }}
 <header class="page-header">
-    <!-- <h1>{{ .Title | default .Site.Title }}</h1> -->
-    {{- if .IsHome }}
-        <h1>Wszystkie wpisy</h1>
-    {{- end }}
+    <h1>Wszystkie wpisy</h1>
 </header>
-
-<div class="post-content">
-    {{ .Content }}
-</div>
-
-{{- $pages := .Paginator.Pages }}
-{{- range $pages }}
-<article class="post-entry"
-    style="box-shadow: none; margin: 0; padding: 5px 0; border-bottom: 1px solid var(--border);">
-    <div style="display: flex; align-items: baseline; gap: 20px;">
-        <time style="color: var(--secondary); font-family: monospace; white-space: nowrap; font-size: 0.9rem;">
-            {{ .Date.Format "2 January 2006" }}
-        </time>
-        <h3 style="margin: 0; font-size: 1.1rem; font-weight: 400;">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </h3>
-    </div>
-</article>
 {{- end }}
 
-{{- if gt .Paginator.TotalPages 1 }}
-<footer class="page-footer">
-    <nav class="pagination">
-        {{- if .Paginator.HasPrev }}
-        <a class="prev" href="{{ .Paginator.Prev.URL }}">« Poprzednia</a>
-        {{- end }}
-        {{- if .Paginator.HasNext }}
-        <a class="next" href="{{ .Paginator.Next.URL }}">Następna »</a>
-        {{- end }}
-    </nav>
-</footer>
+{{- $pages := where site.RegularPages "Section" "posts" }}
+
+{{- /* Pętla wyświetlająca wpisy */ -}}
+    {{- range $pages }}
+    <article class="post-entry"
+        style="box-shadow: none; margin: 0; padding: 5px 0; border-bottom: 1px solid var(--border);">
+        <div style="display: flex; align-items: baseline; gap: 20px;">
+            <time style="color: var(--secondary); font-family: monospace; white-space: nowrap; font-size: 0.9rem;">
+                {{ .Date.Format "2 January 2006" }}
+            </time>
+            <h3 style="margin: 0; font-size: 1.1rem; font-weight: 400;">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h3>
+        </div>
+    </article>
+    {{- end }}
+
 {{- end }}
-{{ end }}

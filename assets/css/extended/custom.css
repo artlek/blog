@@ -46,3 +46,8 @@ h2 {
     display: flex;
     align-items: center;
 }
+
+:root {
+    /* Główny kolor akcentu (np. dla linków i przycisków) */
+    --primary: #052d33;
+}

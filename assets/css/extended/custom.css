@@ -1,3 +1,39 @@
+/* Fonts */
+@font-face {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/FiraSans-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/FiraSans-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/FiraCode-Regular.woff2') format('woff2');
+}
+:root {
+    --font-family: 'Fira Sans', sans-serif;
+    --code-font-family: 'Fira Code', monospace;
+}
+body {
+    font-family: var(--font-family);
+}
+code, pre, time {
+    font-family: var(--code-font-family) !important;
+    font-variant-ligatures: contextual;
+    /* Aktywuje strzałki i operatory */
+    text-rendering: optimizeLegibility;
+}
+
 /* Wymuszenie białego tła dla trybu JASNEGO */
 :not([data-theme="dark"]) body {
     --theme: #ffffff !important;

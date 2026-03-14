@@ -39,6 +39,7 @@ code, pre, time {
     --theme: #ffffff !important;
     background-color: var(--theme) !important;
 }
+
 /* Usuwa tło, obramowanie i cienie z kart wpisów */
 .post-entry {
     background: none !important;
@@ -47,6 +48,7 @@ code, pre, time {
     border-bottom: 1px solid var(--border) !important;
     border-radius: 0 !important;
 }
+
 /* element tagu na stronie tagów */
 .terms-tags a {
     border-radius: 0 !important;
@@ -55,6 +57,7 @@ code, pre, time {
 .terms-tags a:hover {
     color: var(--secondary) !important;
 }
+
 /* element tagu na stronie wpisu */
 .post-tags a {
     border-radius: 0 !important;
@@ -71,19 +74,41 @@ h2 {
 .post-title {
     font-size: 2.0rem !important;
 }
-/* logo w nagłówku */
-.logo img {
-    border-radius: 50% !important;
-    margin-right: 15px !important;
-    vertical-align: middle;
-    object-fit: cover;
+
+/* Główny kolor akcentu (np. dla linków i przycisków) */
+:root {
+    --primary: #073c44;
 }
-.logo a {
+
+/* Stylowanie kontenera logo */
+.logo {
     display: flex;
     align-items: center;
 }
 
-:root {
-    /* Główny kolor akcentu (np. dla linków i przycisków) */
-    --primary: #052d33;
+/* Tworzenie kółka z inicjałem przed tekstem */
+.logo a::before {
+    content: "L.";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+    padding-left: 3px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 600;
+}
+/* Dostosowanie wyglądu samego tekstu tytułu */
+.logo a {
+    display: flex;
+    align-items: center;
+}
+.logo a:hover::before {
+    background: var(--primary);
+    color: var(--theme);
+    /* Odwrócenie kolorów przy najechaniu */
+    transition: 0.3s;
 }

@@ -24,8 +24,7 @@ params:
     hideCopyright: true
   label:
     text: "lekston.net"
-    icon: /avatar.jpg
-    iconHeight: 35
+    icon:
     
 menu:
   main:

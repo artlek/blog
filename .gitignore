@@ -17,3 +17,5 @@ Thumbs.db
 # Logi błędów i pliki tymczasowe
 *.log
 tmp/
+
+private/

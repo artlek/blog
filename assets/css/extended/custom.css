@@ -105,10 +105,17 @@ h2 {
 .logo a {
     display: flex;
     align-items: center;
+    flex-grow: 1;
 }
 .logo a:hover::before {
     background: var(--primary);
     color: var(--theme);
     /* Odwrócenie kolorów przy najechaniu */
     transition: 0.3s;
+}
+
+/* Przesuwa przycisk motywu na prawą stronę */
+div.logo {
+    margin-right: auto;
+    flex-grow: 1;
 }
